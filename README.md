@@ -16,3 +16,4 @@ To build the project, use the following Maven command:
 
 ```sh
 mvn clean install
+```
