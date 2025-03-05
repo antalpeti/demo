@@ -4,9 +4,12 @@ public class Demo {
 
   @SuppressWarnings("all")
   public static void main(String[] args) {
-    System.out.println("Hello, World!");
-    System.out.println("Hello, World of Java!");
-    System.out.println("Hello, World Again!");
+    String message1 = "Hello, World!";
+    String message2 = "Hello, World of Java!";
+    String message3 = "Hello, World Again!";
+    System.out.println(message1);
+    System.out.println(message2);
+    System.out.println(message3);
   }
 
 }
