@@ -5,25 +5,11 @@ public class StringDemo {
   @SuppressWarnings({"java:S106", "java:S125"})
   public static void main(String[] args) {
 
-    /*
-    var message = "Hello World!";
-    var extra = "I love to code!";
-     */
+    String theColor = "blue";
+    String theHobby = "coding";
 
-    String message = "Hello World!";
-    String extra = "I love to code!";
-
-    System.out.println(message + " " + extra);
-
-    System.out.println("Length of " + message + " is " + message.length());
-    System.out.println("Upper case version of " + message + " is " + message.toUpperCase());
-    System.out.println("Lower case version of " + message + " is " + message.toLowerCase());
-
-    String combo = message + " " + extra;
-    System.out.println("Combo: " + combo);
-
-    String uppercaseVersion = combo.toUpperCase();
-    System.out.println("Uppercase version of combo: " + uppercaseVersion);
+    System.out.println("My favorite color is " + theColor);
+    System.out.println("My hobby is " + theHobby);
   }
 
 }
