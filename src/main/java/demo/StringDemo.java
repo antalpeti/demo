@@ -14,6 +14,16 @@ public class StringDemo {
     String extra = "I love to code!";
 
     System.out.println(message + " " + extra);
+
+    System.out.println("Length of " + message + " is " + message.length());
+    System.out.println("Upper case version of " + message + " is " + message.toUpperCase());
+    System.out.println("Lower case version of " + message + " is " + message.toLowerCase());
+
+    String combo = message + " " + extra;
+    System.out.println("Combo: " + combo);
+
+    String uppercaseVersion = combo.toUpperCase();
+    System.out.println("Uppercase version of combo: " + uppercaseVersion);
   }
 
 }
