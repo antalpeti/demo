@@ -30,5 +30,5 @@ public class StringInputDemo {
 
     // Close the Scanner object to free up resources
     scanner.close();
-
+  }
 }
