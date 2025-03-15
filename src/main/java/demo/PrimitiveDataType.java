@@ -35,5 +35,34 @@ public class PrimitiveDataType {
     System.out.println("char: min value = " + (int) Character.MIN_VALUE + ", max value = " + (int) Character.MAX_VALUE);
     System.out.println("boolean: no min or max value");
 
+    float interestRate = 7.95f;
+    double prizeWinning = 9982342452.45;
+    System.out.println("Interest Rate: " + interestRate);
+    System.out.println("Prize Winning: " + prizeWinning);
+    String formattedInterestRate = String.format("%.2f", interestRate);
+    System.out.println("Formatted Interest Rate: " + formattedInterestRate);
+    String formattedPrizeWinning = String.format("%.2f", prizeWinning);
+    System.out.println("Formatted Prize Winning: " + formattedPrizeWinning);
+
+    char stage = 'Q';
+    boolean alive = true;
+    boolean found = false;
+
+    System.out.println("Stage: " + stage);
+    System.out.println("Alive: " + alive);
+    System.out.println("Found: " + found);
+
+    double gradeExam1 = 87.5;
+    double gradeExam2 = 100.0;
+    double gradeExam3 = 66.50;
+
+    double averageGrade = (gradeExam1 + gradeExam2 + gradeExam3) / 3;
+    System.out.println("Exam 1 Grade: " + gradeExam1);
+    System.out.println("Exam 2 Grade: " + gradeExam2);
+    System.out.println("Exam 3 Grade: " + gradeExam3);
+    System.out.println("Average Grade: " + averageGrade);
+    String formattedAverageGrade = String.format("%.2f", averageGrade);
+    System.out.println("Formatted Average Grade: " + formattedAverageGrade);
+
   }
 }
