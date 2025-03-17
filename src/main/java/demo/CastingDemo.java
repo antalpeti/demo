@@ -6,22 +6,28 @@ public class CastingDemo {
   public static void main(String[] args) {
 
     // convert double to int
-    double theDouble = 123.456;
-    int theInt = (int) theDouble;
+    double theDoubleGradeAvg = 123.456;
+    int theIntGradeAvg = (int) theDoubleGradeAvg;
 
-    System.out.println("The double variable is " + theDouble);
-    System.out.println("The int variable is " + theInt);
+    System.out.println("theDoubleGradeAvg=" + theDoubleGradeAvg);
+    System.out.println("theIntGradeAvg=" + theIntGradeAvg);
 
     // convert float to byte
-    float theFloat = 123.456f;
-    byte theByte = (byte) theFloat;
-    System.out.println("The float variable is " + theFloat);
-    System.out.println("The byte variable is " + theByte);
+    float theFloatDistance = 123.456f;
+    byte theByteDistance = (byte) theFloatDistance;
+    System.out.println("theFloatDistance=" + theFloatDistance);
+    System.out.println("theByteDistance=" + theByteDistance);
 
     // convert int to char
-    int theInt2 = 65;
-    char theChar = (char) theInt2;
-    System.out.println("The int variable is " + theInt2);
-    System.out.println("The char variable is " + theChar);
+    int theCharacterCode = 65;
+    char theChar = (char) theCharacterCode;
+    System.out.println("theCharacterCode=" + theCharacterCode);
+    System.out.println("theChar=" + theChar);
+
+    //convert String to int
+    String theStringCount = "123";
+    int theIntCount = Integer.parseInt(theStringCount);
+    System.out.println("theStringCount=" + theStringCount);
+    System.out.println("theIntCount=" + theIntCount);
   }
 }
