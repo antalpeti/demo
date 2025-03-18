@@ -16,7 +16,10 @@ public class ConditionalDemoBasicIfElse {
 
     System.out.println("Minimum voting age is " + minVotingAge);
 
-    if (age >= minVotingAge) {
+    boolean eligible = (age >= minVotingAge);
+    System.out.println("eligible: " + eligible);
+
+    if (eligible) {
       System.out.println("You are eligible to vote.");
     } else {
       System.out.println("You are NOT eligible to vote.");
