@@ -10,7 +10,7 @@ public class SwitchComputerType {
 
     System.out.print("Enter computer type (smartphone, tablet, laptop, desktop): ");
     String computerType = scanner.nextLine();
-
+    computerType = computerType.toLowerCase();
     switch (computerType) {
       case "smartphone":
         System.out.println("Smartphones offer computing power in your hand.");
