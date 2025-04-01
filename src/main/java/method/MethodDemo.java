@@ -4,13 +4,11 @@ public class MethodDemo {
 
   @SuppressWarnings("java:S125")
   public static void main(String[] args) {
-//    displayGreetings();
-
-    displayManyGreetings(3);
+    displayGreetings(3);
   }
 
   @SuppressWarnings("java:S106")
-  static void displayManyGreetings(int count) {
+  static void displayGreetings(int count) {
     for (int i = 0; i < count; i++) {
       displayGreetings();
 
