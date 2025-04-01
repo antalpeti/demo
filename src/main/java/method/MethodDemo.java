@@ -12,9 +12,7 @@ public class MethodDemo {
   @SuppressWarnings("java:S106")
   static void displayManyGreetings(int count) {
     for (int i = 0; i < count; i++) {
-      System.out.println("Hello World!");
-      System.out.println("Welcome, welcome!");
-      System.out.println("Please make yourself at home.");
+      displayGreetings();
 
       System.out.println();
     }
