@@ -17,5 +17,19 @@ public class ArrayDemo {
     System.out.println("Length of the array: " + colors.length);
 
     System.out.println();
+
+    System.out.println("Looping through the array - Version 1:");
+
+    for (int i = 0; i < colors.length; i++) {
+      System.out.println(colors[i]);
+    }
+
+    System.out.println();
+
+    System.out.println("Looping through the array - Version 2:");
+
+    for (String color : colors) {
+      System.out.println(color);
+    }
   }
 }
