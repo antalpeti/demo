@@ -1,19 +1,30 @@
 package array;
 
+import java.util.Scanner;
+
 public class StudentGradesDemo {
 
   @SuppressWarnings("java:S106")
   public static void main(String[] args) {
-    double[] grades = new double[3];
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("How many grades do you want to enter? ");
+    int numberOfGrades = scanner.nextInt();
 
-    grades[0] = 85.5;
-    grades[1] = 90.0;
-    grades[2] = 78.5;
+    System.out.println();
+    double[] userInputGrades = new double[numberOfGrades];
 
-    System.out.println("Contents of the array:");
-    for (double grade : grades) {
-      System.out.println(grade);
+    for (int i = 0; i < userInputGrades.length; i++) {
+      System.out.print("Enter grade number " + (i + 1) + ": ");
+      userInputGrades[i] = scanner.nextDouble();
     }
+
+    System.out.println();
+
+    for (double userInputGrade : userInputGrades) {
+      System.out.println(userInputGrade);
+    }
+
+    scanner.close();
   }
 
 }
