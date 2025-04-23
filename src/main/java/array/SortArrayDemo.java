@@ -2,6 +2,7 @@ package array;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class SortArrayDemo {
@@ -9,13 +10,38 @@ public class SortArrayDemo {
   @SuppressWarnings("java:S106")
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("What size array do you want? ");
-    int size = scanner.nextInt();
+    int size = 0;
+
+    // Validate array size input
+    while (true) {
+      System.out.print("What size array do you want? ");
+      try {
+        size = scanner.nextInt();
+        if (size > 0) {
+          break;
+        } else {
+          System.out.println("Please enter a positive integer.");
+        }
+      } catch (InputMismatchException e) {
+        System.out.println("Invalid input. Please enter a positive integer.");
+        scanner.next(); // Clear invalid input
+      }
+    }
 
     int[] myDataArray = new int[size];
+
+    // Validate array elements input
     for (int i = 0; i < myDataArray.length; i++) {
-      System.out.print("Enter number " + (i + 1) + ": ");
-      myDataArray[i] = scanner.nextInt();
+      while (true) {
+        System.out.print("Enter number " + (i + 1) + ": ");
+        try {
+          myDataArray[i] = scanner.nextInt();
+          break;
+        } catch (InputMismatchException e) {
+          System.out.println("Invalid input. Please enter an integer.");
+          scanner.next(); // Clear invalid input
+        }
+      }
     }
 
     System.out.println();
@@ -31,7 +57,7 @@ public class SortArrayDemo {
     displayData(myDataArray);
 
     System.out.println();
-    
+
     Integer[] myDataArrayDescending = Arrays.stream(myDataArray).boxed().toArray(Integer[]::new);
     Arrays.sort(myDataArrayDescending, Comparator.reverseOrder());
 
