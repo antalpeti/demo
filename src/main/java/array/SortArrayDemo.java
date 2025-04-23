@@ -1,6 +1,7 @@
 package array;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class SortArrayDemo {
@@ -26,8 +27,16 @@ public class SortArrayDemo {
 
     Arrays.sort(myDataArray);
 
-    System.out.println("AFTER sorting:");
+    System.out.println("AFTER sorting (ascending):");
     displayData(myDataArray);
+
+    System.out.println();
+    
+    Integer[] myDataArrayDescending = Arrays.stream(myDataArray).boxed().toArray(Integer[]::new);
+    Arrays.sort(myDataArrayDescending, Comparator.reverseOrder());
+
+    System.out.println("AFTER sorting (descending):");
+    displayData(Arrays.stream(myDataArrayDescending).mapToInt(Integer::intValue).toArray());
 
     scanner.close();
   }
