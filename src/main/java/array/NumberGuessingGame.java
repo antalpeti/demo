@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class NumberGuessingGame {
 
+  @SuppressWarnings("java:S106")
   public static void main(String[] args) {
     int upperBound = 5;
     Random random = new Random();
-    
+
     int secretNumber = random.nextInt(upperBound) + 1;
     int maxAttempts = 3;
 
